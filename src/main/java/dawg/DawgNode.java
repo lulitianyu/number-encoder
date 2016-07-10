@@ -35,14 +35,6 @@ public class DawgNode implements IDawgNode {
 		return children.containsKey(edge);
 	}
 
-	/**
-	 * Add a child node to the current node.
-	 * 
-	 * @param edge
-	 *            the edge
-	 * @param child
-	 *            the child
-	 */
 	void addChild(char edge, DawgNode child) {
 		children.put(edge, child);
 	}

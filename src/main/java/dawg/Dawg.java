@@ -18,29 +18,14 @@ import java.util.Map;
  * 
  */
 public class Dawg implements IDawg {
-	/**
-	 * The node ID generator increases on each new node creation.
-	 */
 	private long dawgNodeIdGenerator = 0;
 
-	/**
-	 * The root node.
-	 */
 	private final DawgNode root;
 
-	/**
-	 * All nodes used in the graph with duplicate checked and removed.
-	 */
 	private final Map<DawgNode, DawgNode> uniqueNodes;
 
-	/**
-	 * The last added word.
-	 */
 	private String lastAddedWord;
 
-	/**
-	 * Nodes with possible duplicate.
-	 */
 	private final List<ParentEdgeChildNode> nodesWithDuplicates;
 
 	public Dawg() {
@@ -49,7 +34,6 @@ public class Dawg implements IDawg {
 		lastAddedWord = "";
 		nodesWithDuplicates = new ArrayList<ParentEdgeChildNode>();
 
-		// Add root node since it doesn't require duplicate checking
 		nodesWithDuplicates.add(new ParentEdgeChildNode(root));
 	}
 

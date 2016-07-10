@@ -103,6 +103,22 @@ public class DawgTest {
 		afterFinalize_ShouldHaveSize(13);
 	}
 
+	@Test
+	public void afterAddFiveWordsWithCommonPrefixAndSuffix_ShouldContainWordAndHaveNodeCount() {
+		String produce = "produce";
+		String productive = "productive";
+		String production = "production";
+		String seduce = "seduce";
+		String seductive = "seductive";
+
+		afterAddWord_ShouldContainWord(produce);
+		afterAddWord_ShouldContainWord(production);
+		afterAddWord_ShouldContainWord(productive);
+		afterAddWord_ShouldContainWord(seduce);
+		afterAddWord_ShouldContainWord(seductive);
+		afterFinalize_ShouldHaveSize(19);
+	}
+
 	@Test(expected = Dawg.WordsNotAddedInAlphabeticOrderException.class)
 	public void givenWordsNotInOrder_ShouldThrow() {
 		String product = "product";
