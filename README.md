@@ -2,9 +2,9 @@
 
 The following mapping from letters to digits is given:
 
-E | J N Q | R W X | D S Y | F T | A M | C I V | B K U | L O P | G H Z
-e | j n q | r w x | d s y | f t | a m | c i v | b k u | l o p | g h z
-0 |   1   |   2   |   3   |  4  |  5  |   6   |   7   |   8   |   9
+|| E || J N Q || R W X || D S Y || F T || A M || C I V || B K U || L O P || G H Z
+|| e || j n q || r w x || d s y || f t || a m || c i v || b k u || l o p || g h z
+|| 0 ||   1   ||   2   ||   3   ||  4  ||  5  ||   6   ||   7   ||   8   ||   9
 
 We want to use this mapping for encoding telephone numbers by words, so
 that it becomes easier to remember the numbers.
@@ -23,8 +23,8 @@ encoded as double-quotes.  The double-quotes should be ignored.  EG.]
 Only exactly each encoding that is possible from this dictionary and
 that matches the phone number exactly shall be printed. Thus, possibly
 nothing is printed at all. The words in the dictionary contain letters
-(capital or small, but the difference is ignored in the sorting), dashes
-- and double quotes " . For the encoding only the letters are used, but
+(capital or small, but the difference is ignored in the sorting), dashes -
+and double quotes " . For the encoding only the letters are used, but
 the words must be printed in exactly the form given in the dictionary.
 Leading non-letters do not occur in the dictionary.
 
@@ -105,30 +105,24 @@ lines).
 
 Wrong outputs for the above example would be e.g.
 
-`562482: Mix Tor`, because the formatting of the phone number is
-incorrect,
-
-`10/783--5: je bos 5`, because the formatting of the second word is
-incorrect,
-
-`4824: 4 Ort`, because in place of the first digit the words `Torf`, `fort`,
-`Tor` could be used,
-
-`1078-913-5: je Bo" 9 1 da`, since there are two subsequent digits in the
-encoding,
-
-`04824: 0 Tor`, because the encoding does not cover the whole phone
-number, and
-
-`5624-82: mir Torf`, because the encoding is longer than the phone number.
+- `562482: Mix Tor`, because the formatting of the phone number is
+incorrect
+- `10/783--5: je bos 5`, because the formatting of the second word is
+incorrect
+- `4824: 4 Ort`, because in place of the first digit the words `Torf`, `fort`,
+`Tor` could be used
+- `1078-913-5: je Bo" 9 1 da`, since there are two subsequent digits in the
+encoding
+- `04824: 0 Tor`, because the encoding does not cover the whole phone
+number
+- `5624-82: mir Torf`, because the encoding is longer than the phone number
 
 
 ## Quantitative requirements
-
-Length of the individual words in the dictionary: 50 characters maximum.
-Number of words in the dictionary: 75000 maximum
-Length of the phone numbers: 50 characters maximum.
-Number of entries in the phone number file: unlimited.
+- Length of the individual words in the dictionary: 50 characters maximum.
+- Number of words in the dictionary: 75000 maximum
+- Length of the phone numbers: 50 characters maximum.
+- Number of entries in the phone number file: unlimited.
 
 ## Quality requirements
 
